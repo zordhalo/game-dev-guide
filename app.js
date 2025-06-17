@@ -20,9 +20,10 @@ class IndieGameGuide {
         const themeToggle = document.getElementById('theme-toggle');
         const themeIcon = themeToggle.querySelector('.theme-toggle__icon');
         
-        // Set initial theme based on system preference
+        // Check for saved theme preference or use system preference
+        const savedTheme = localStorage.getItem('theme');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        let currentTheme = prefersDark ? 'dark' : 'light';
+        let currentTheme = savedTheme || (prefersDark ? 'dark' : 'light');
         
         // Apply initial theme
         this.applyTheme(currentTheme);
@@ -33,11 +34,14 @@ class IndieGameGuide {
             currentTheme = currentTheme === 'light' ? 'dark' : 'light';
             this.applyTheme(currentTheme);
             this.updateThemeIcon(currentTheme, themeIcon);
+            
+            // Save theme preference
+            localStorage.setItem('theme', currentTheme);
         });
 
         // Listen for system theme changes
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-            if (!document.documentElement.hasAttribute('data-color-scheme')) {
+            if (!localStorage.getItem('theme')) {
                 currentTheme = e.matches ? 'dark' : 'light';
                 this.applyTheme(currentTheme);
                 this.updateThemeIcon(currentTheme, themeIcon);
@@ -47,6 +51,7 @@ class IndieGameGuide {
 
     applyTheme(theme) {
         document.documentElement.setAttribute('data-color-scheme', theme);
+        console.log(`Theme changed to: ${theme}`); // For debugging
     }
 
     updateThemeIcon(theme, iconElement) {
