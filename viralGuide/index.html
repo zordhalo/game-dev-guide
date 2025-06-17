@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viral Game Development Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <h2>🎮 Viral Game Dev</h2>
+            </div>
+            <div class="navbar-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#analytics" class="nav-link">Analytics</a>
+                <a href="#principles" class="nav-link">Principles</a>
+                <a href="#psychology" class="nav-link">Psychology</a>
+                <a href="#implementation" class="nav-link">Implementation</a>
+                <a href="#strategy" class="nav-link">Strategy</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>The Data-Driven Guide to Viral Game Development</h1>
+                    <p class="hero-subtitle">Transform your indie game into a viral sensation using psychological principles and analytics-backed strategies</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h3>100+</h3>
+                            <p>Videos Analyzed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>400+</h3>
+                            <p>Data Points</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>24</h3>
+                            <p>Gameplay Features</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Navigation Cards -->
+        <section class="quick-nav">
+            <div class="container">
+                <div class="nav-grid">
+                    <div class="nav-card" onclick="scrollToSection('analytics')">
+                        <div class="nav-card-icon">📊</div>
+                        <h3>Analytics Study</h3>
+                        <p>100 video retention research and key insights</p>
+                    </div>
+                    <div class="nav-card" onclick="scrollToSection('principles')">
+                        <div class="nav-card-icon">🎯</div>
+                        <h3>Core Principles</h3>
+                        <p>Essential retention mechanics and timing structures</p>
+                    </div>
+                    <div class="nav-card" onclick="scrollToSection('psychology')">
+                        <div class="nav-card-icon">🧠</div>
+                        <h3>Psychology</h3>
+                        <p>Viral triggers and dopamine-driven design</p>
+                    </div>
+                    <div class="nav-card" onclick="scrollToSection('implementation')">
+                        <div class="nav-card-icon">⚡</div>
+                        <h3>Implementation</h3>
+                        <p>Practical solo dev strategies and tips</p>
+                    </div>
+                    <div class="nav-card" onclick="scrollToSection('strategy')">
+                        <div class="nav-card-icon">🎲</div>
+                        <h3>Strategy</h3>
+                        <p>Strategic frameworks and golden rules</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analytics Study Section -->
+        <section id="analytics" class="section">
+            <div class="container">
+                <h2 class="section-title">📊 Analytics Study</h2>
+                <div class="content-grid">
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Research Methodology</h3>
+                            <p>Partnership with Alpha Beta Gamer analyzing 100 gameplay videos with over 400 data points, identifying 24 specific gameplay features and their impact on viewer retention.</p>
+                            <div class="highlight-box">
+                                <strong>Key Insight:</strong> Higher retention directly correlates with increased views, creating a viral snowball effect.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Retention Formula</h3>
+                            <div class="formula-box">
+                                Working toward <strong>clear goals</strong> with <strong>visible progress</strong>
+                            </div>
+                            <h4>Optimal Timing Structure:</h4>
+                            <ul>
+                                <li><strong>0-5 seconds:</strong> Define conflict</li>
+                                <li><strong>5-20 seconds:</strong> Provide context</li>
+                                <li><strong>20-80 seconds:</strong> Demonstrate rapid progress</li>
+                                <li><strong>Throughout:</strong> Add complications</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Harmful vs Beneficial Features -->
+                <div class="feature-comparison">
+                    <div class="harmful-features">
+                        <h3 class="section-subtitle danger">❌ Harmful Features</h3>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <h4>Menu Screens</h4>
+                                <div class="retention-impact negative">30-50% viewer drop-off</div>
+                                <p>Until gameplay begins</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Player Deaths</h4>
+                                <div class="retention-impact negative">6-15% retention dips</div>
+                                <p>Per death occurrence</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Level Completion</h4>
+                                <div class="retention-impact negative">3-10% retention dips</div>
+                                <p>At each completion point</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Exposition</h4>
+                                <div class="retention-impact negative">3-10% retention losses</div>
+                                <p>Worse with length and timing</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="beneficial-features">
+                        <h3 class="section-subtitle success">✅ Beneficial Features</h3>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <h4>Chase Scenes</h4>
+                                <div class="retention-impact positive">5-35% retention bumps</div>
+                                <p>2-5 minute holds</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Boss Fights</h4>
+                                <div class="retention-impact positive">1-3 minute holds</div>
+                                <p>With clear power dynamics</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Jump Scares</h4>
+                                <div class="retention-impact positive">2-25% retention bumps</div>
+                                <p>Depending on intensity</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Discovery Elements</h4>
+                                <div class="retention-impact positive">2-5% bumps</div>
+                                <p>Hidden rooms and secrets</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Principles Section -->
+        <section id="principles" class="section">
+            <div class="container">
+                <h2 class="section-title">🎯 Core Retention Principles</h2>
+                <div class="principles-grid">
+                    <div class="principle-card" onclick="toggleCollapse('principle1')">
+                        <div class="principle-header">
+                            <h3>Enemy Control vs Player Control</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="principle-content" id="principle1">
+                            <p><strong>Key Rule:</strong> Enemy control creates engagement, player control creates boredom.</p>
+                            <p>When players have full control, they often take the path of least resistance, leading to predictable and boring gameplay. Enemies forcing decisions create tension and engagement.</p>
+                        </div>
+                    </div>
+
+                    <div class="principle-card" onclick="toggleCollapse('principle2')">
+                        <div class="principle-header">
+                            <h3>Visible Progress</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="principle-content" id="principle2">
+                            <p>Players need to see constant progression toward clear, understandable goals. This could be:</p>
+                            <ul>
+                                <li>Health bars depleting</li>
+                                <li>Collectibles increasing</li>
+                                <li>Distance to objective decreasing</li>
+                                <li>Power-ups being acquired</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="principle-card" onclick="toggleCollapse('principle3')">
+                        <div class="principle-header">
+                            <h3>Critical First Three Minutes</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="principle-content" id="principle3">
+                            <p>The first three minutes are the most vulnerable period for viewer retention. During this time:</p>
+                            <ul>
+                                <li>Establish conflict immediately</li>
+                                <li>Show rapid, visible progress</li>
+                                <li>Avoid menu screens and exposition</li>
+                                <li>Demonstrate core gameplay loop</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="principle-card" onclick="toggleCollapse('principle4')">
+                        <div class="principle-header">
+                            <h3>Variety Prevention</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="principle-content" id="principle4">
+                            <p>Variety prevents mechanical exhaustion. Without variety, even the most engaging mechanics become boring through repetition. Implement:</p>
+                            <ul>
+                                <li>Different enemy types and behaviors</li>
+                                <li>Varying level layouts and challenges</li>
+                                <li>Multiple interaction methods</li>
+                                <li>Escalating difficulty curves</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Psychology Section -->
+        <section id="psychology" class="section">
+            <div class="container">
+                <h2 class="section-title">🧠 Psychological Triggers</h2>
+                <div class="psychology-grid">
+                    <div class="psychology-card">
+                        <h3>💊 Dopamine Rewards</h3>
+                        <div class="trigger-list">
+                            <div class="trigger-item">
+                                <strong>Instant Gratification:</strong> Immediate feedback and rewards
+                            </div>
+                            <div class="trigger-item">
+                                <strong>Variable Schedules:</strong> Unpredictable reward timing
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="psychology-card">
+                        <h3>🏆 Progress Ownership</h3>
+                        <div class="trigger-list">
+                            <div class="trigger-item">
+                                <strong>Completion Bias:</strong> Drive to finish what's started
+                            </div>
+                            <div class="trigger-item">
+                                <strong>Social Comparison:</strong> Leaderboards and achievements
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="psychology-card">
+                        <h3>👥 Social Contagion</h3>
+                        <div class="trigger-list">
+                            <div class="trigger-item">
+                                <strong>Collaborative Urgency:</strong> Shared time pressure
+                            </div>
+                            <div class="trigger-item">
+                                <strong>Competitive Envy:</strong> Wanting what others have
+                            </div>
+                            <div class="trigger-item">
+                                <strong>Shared Experiences:</strong> Common reference points
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="psychology-card">
+                        <h3>🎭 Emotional Amplification</h3>
+                        <div class="trigger-list">
+                            <div class="trigger-item">
+                                <strong>Triumph Moments:</strong> Overcoming difficult challenges
+                            </div>
+                            <div class="trigger-item">
+                                <strong>Shared Tension:</strong> Collective anxiety and relief
+                            </div>
+                            <div class="trigger-item">
+                                <strong>Nostalgia Hooks:</strong> Familiar elements with new twists
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation Section -->
+        <section id="implementation" class="section">
+            <div class="container">
+                <h2 class="section-title">⚡ Solo Dev Implementation</h2>
+                <div class="implementation-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" onclick="switchTab('viral-design')">Viral Design</button>
+                        <button class="tab-btn" onclick="switchTab('efficient-dev')">Efficient Development</button>
+                        <button class="tab-btn" onclick="switchTab('lean-marketing')">Lean Marketing</button>
+                        <button class="tab-btn" onclick="switchTab('time-management')">Time Management</button>
+                    </div>
+
+                    <div class="tab-content active" id="viral-design">
+                        <h3>Viral Design Strategies</h3>
+                        <div class="strategy-list">
+                            <div class="strategy-item">
+                                <h4>🎮 Dopamine-Driven Rewards</h4>
+                                <p>Implement instant feedback systems with variable reward schedules to maintain engagement</p>
+                            </div>
+                            <div class="strategy-item">
+                                <h4>📱 Social Proof Mechanics</h4>
+                                <p>Include leaderboards, achievements, and sharing features to leverage social psychology</p>
+                            </div>
+                            <div class="strategy-item">
+                                <h4>🔄 One-Click Sharing</h4>
+                                <p>Make it effortless for players to share their achievements and experiences</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="efficient-dev">
+                        <h3>Efficient Development Approaches</h3>
+                        <div class="strategy-list">
+                            <div class="strategy-item">
+                                <h4>🎯 Recommended Genres</h4>
+                                <p><strong>Roguelikes:</strong> Infinite replayability with minimal content creation</p>
+                                <p><strong>Sandbox Games:</strong> Player-driven content generation</p>
+                                <p><strong>Survival Games:</strong> Natural tension and progression systems</p>
+                            </div>
+                            <div class="strategy-item">
+                                <h4>🔧 Procedural Generation</h4>
+                                <p>Use algorithms to create varied content without manual design work</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="lean-marketing">
+                        <h3>Lean Marketing Tactics</h3>
+                        <div class="strategy-list">
+                            <div class="strategy-item">
+                                <h4>🎬 Vertical Slice Demos</h4>
+                                <p>Create polished 2-3 minute gameplay videos showcasing core mechanics</p>
+                            </div>
+                            <div class="strategy-item">
+                                <h4>🎯 Early Steam Presence</h4>
+                                <p>Set up Steam page early to start building wishlist momentum</p>
+                            </div>
+                            <div class="strategy-item">
+                                <h4>📹 Weekly Devlogs</h4>
+                                <p>Document development progress to build community and generate content</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="time-management">
+                        <h3>Time Management</h3>
+                        <div class="strategy-list">
+                            <div class="strategy-item">
+                                <h4>🎯 Avoid Scope Creep</h4>
+                                <p>Define core features early and resist adding new mechanics mid-development</p>
+                            </div>
+                            <div class="strategy-item">
+                                <h4>🔄 Iterate with Feedback</h4>
+                                <p>Get player feedback early and often to guide development decisions</p>
+                            </div>
+                            <div class="strategy-item">
+                                <h4>📱 Focus One Platform First</h4>
+                                <p>Master one platform before expanding to others</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategy Section -->
+        <section id="strategy" class="section">
+            <div class="container">
+                <h2 class="section-title">🎲 Strategic Guidelines</h2>
+                
+                <div class="strategy-section">
+                    <h3 class="section-subtitle">Golden Rules</h3>
+                    <div class="rules-grid">
+                        <div class="rule-card">
+                            <div class="rule-number">1</div>
+                            <p>Enemy control creates engagement, player control creates boredom</p>
+                        </div>
+                        <div class="rule-card">
+                            <div class="rule-number">2</div>
+                            <p>Visible progress toward clear goals maintains retention</p>
+                        </div>
+                        <div class="rule-card">
+                            <div class="rule-number">3</div>
+                            <p>First three minutes are critical vulnerability periods</p>
+                        </div>
+                        <div class="rule-card">
+                            <div class="rule-number">4</div>
+                            <p>Variety prevents mechanical exhaustion</p>
+                        </div>
+                        <div class="rule-card">
+                            <div class="rule-number">5</div>
+                            <p>Think like content creators when designing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="strategy-section">
+                    <h3 class="section-subtitle">Quick Wins</h3>
+                    <div class="quick-wins-list">
+                        <div class="quick-win-item">
+                            <span class="win-icon">⚡</span>
+                            <span>Remove menu delays</span>
+                        </div>
+                        <div class="quick-win-item">
+                            <span class="win-icon">🏃</span>
+                            <span>Add visible-enemy chase sequences</span>
+                        </div>
+                        <div class="quick-win-item">
+                            <span class="win-icon">😱</span>
+                            <span>Implement varied jump scares</span>
+                        </div>
+                        <div class="quick-win-item">
+                            <span class="win-icon">🔄</span>
+                            <span>Ensure instant respawns</span>
+                        </div>
+                        <div class="quick-win-item">
+                            <span class="win-icon">👁️</span>
+                            <span>Maintain visual clarity</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="strategy-section">
+                    <h3 class="section-subtitle">Genre Analysis</h3>
+                    <div class="genre-cards">
+                        <div class="genre-card horror">
+                            <h4>👻 Horror Games</h4>
+                            <div class="genre-rating">Maximum Viral Efficiency</div>
+                            <ul>
+                                <li>Built-in retention mechanisms</li>
+                                <li>Natural jump scare opportunities</li>
+                                <li>Limited content variety requirements</li>
+                            </ul>
+                        </div>
+                        <div class="genre-card action">
+                            <h4>🔫 Action Shooters</h4>
+                            <div class="genre-rating">Viral Challenges</div>
+                            <ul>
+                                <li>Repetitive action exhaustion</li>
+                                <li>Requires constant variety</li>
+                                <li>High production demands</li>
+                            </ul>
+                        </div>
+                        <div class="genre-card sandbox">
+                            <h4>🧩 Sandbox Puzzle</h4>
+                            <div class="genre-rating">High Long-term Potential</div>
+                            <ul>
+                                <li>Unlimited content creation</li>
+                                <li>Player-driven narratives</li>
+                                <li>Requires skilled content creators</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+        ↑
+    </button>
+
+    <script src="app.js"></script>
+</body>
+</html>
