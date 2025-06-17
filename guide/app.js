@@ -3,6 +3,7 @@
 class IndieGameGuide {
     constructor() {
         this.init();
+        this.setupAnalytics();
     }
 
     init() {
@@ -13,6 +14,33 @@ class IndieGameGuide {
         this.setupScrollAnimations();
         this.setupActiveNavigation();
         this.setupScrollToTop();
+    }
+    
+    // Analytics setup
+    setupAnalytics() {
+        this.trackEvent = (eventName, properties) => {
+            if (window.va) {
+                window.va.track(eventName, properties);
+            }
+        };
+        
+        // Track section navigation
+        document.querySelectorAll('.nav__link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const section = link.getAttribute('href').replace('#', '');
+                this.trackEvent('section_viewed', { section });
+            });
+        });
+        
+        // Track downloads
+        document.querySelectorAll('a[href$=".zip"]').forEach(link => {
+            link.addEventListener('click', () => {
+                this.trackEvent('guide_downloaded', { 
+                    guide: 'indie-game-guide',
+                    filename: link.getAttribute('href').split('/').pop()
+                });
+            });
+        });
     }
 
     // Theme Toggle Functionality
@@ -37,6 +65,11 @@ class IndieGameGuide {
             
             // Save theme preference
             localStorage.setItem('theme', currentTheme);
+            
+            // Track theme change
+            if (this.trackEvent) {
+                this.trackEvent('theme_changed', { theme: currentTheme });
+            }
         });
 
         // Listen for system theme changes

@@ -1,5 +1,14 @@
 // Viral Game Development Guide - Interactive Features
 
+// Analytics tracking with Vercel
+function trackEvent(eventName, properties) {
+    if (window.va) {
+        window.va.track(eventName, properties);
+    } else {
+        console.log(`Analytics event: ${eventName}`, properties);
+    }
+}
+
 // Smooth scroll to section function
 function scrollToSection(sectionId) {
     const element = document.getElementById(sectionId);
@@ -288,6 +297,31 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeKeyboardNavigation();
     initializeProgressIndicator();
     
+    // Add specific tracking for navigation
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const section = link.getAttribute('href').replace('#', '');
+            trackEvent('section_viewed', { section });
+        });
+    });
+    
+    // Track tab switches
+    document.querySelectorAll('.tab-btn').forEach(tab => {
+        tab.addEventListener('click', () => {
+            trackEvent('tab_switched', { tab: tab.textContent });
+        });
+    });
+    
+    // Track downloads
+    document.querySelectorAll('a[href$=".zip"]').forEach(link => {
+        link.addEventListener('click', () => {
+            trackEvent('guide_downloaded', { 
+                guide: 'viral-game-dev-guide',
+                filename: link.getAttribute('href').split('/').pop()
+            });
+        });
+    });
+    
     // Set up scroll event listeners
     let scrollTimeout;
     window.addEventListener('scroll', () => {
@@ -445,10 +479,11 @@ window.toggleCollapse = toggleCollapse;
 window.switchTab = switchTab;
 window.showNotification = showNotification;
 
-// Analytics tracking (placeholder for future implementation)
+// Analytics tracking with Vercel integration
 function trackUserInteraction(action, element) {
-    // This would integrate with analytics services
+    // This integrates with analytics services
     console.log(`User interaction: ${action} on ${element}`);
+    trackEvent('user_interaction', { action, element });
 }
 
 // Add interaction tracking to key elements
